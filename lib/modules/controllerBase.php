@@ -12,7 +12,7 @@ abstract class ControllerBase {
 			Output::returnError(_ERROR_ON_DECODING_SINCE_METHOD_IS_NOT_POST);
 		}
 
-		//Make sure that the content type of the POST request has been set to application/json
+//Make sure that the content type of the POST request has been set to application/json
 		$contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
 		if(strcasecmp($contentType, 'application/json') != 0){
 			Output::returnError(_ERROR_ON_DECODING_SINCE_POSTED_DATA_IS_NOT_APPLICATION_JSON);
