@@ -13,14 +13,14 @@ This should be done until the next lecture.
 
 Includes all the API documentation to be used in order to create the functionality of every single API request.
 
-* [**1. Users**](#1-users)  
-  * [1.1. User Login](#11-user-login)  
-  * [1.2. User Logout](#12-user-logout)  
-  * [1.3. User Add](#13-user-add)  
-  * [1.4. User Update](#14-user-update)  
-  * [1.5. User Delete](#15-user-delete)  
-  * [1.6. User Get](#16-user-get)  
-  * [1.7. User Get All](#17-user-get-all)  
+* [**1. Users**](#1-users)
+  * [1.1. User Login](#11-user-login)
+  * [1.2. User Logout](#12-user-logout)
+  * [1.3. User Add](#13-user-add)
+  * [1.4. User Update](#14-user-update)
+  * [1.5. User Delete](#15-user-delete)
+  * [1.6. User Get](#16-user-get)
+  * [1.7. User Get All](#17-user-get-all)
 
 * [**2. Categories**](#2-categories)
   * [2.1. Category Add](#21-category-add)
