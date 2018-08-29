@@ -29,6 +29,13 @@ Includes all the API documentation to be used in order to create the functionali
   * [2.4. Category Get](#24-category-get)
   * [2.5. Category Get All](#25-category-get-all)  
 
+* [**3. Currencies**](#3-currencies)
+  * [3.1. Currency Add](#31-currency-add)
+  * [3.2. Currency Update](#32-currency-update)
+  * [3.3. Currency Delete](#33-currency-delete)
+  * [3.4. Currency Get](#34-currency-get)
+  * [3.5. Currency Get All](#35-currency-get-all)
+
 
 Every API call will receive a JSON response. It can be a success one or an error one.
 
