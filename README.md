@@ -11,7 +11,7 @@ This should be done until the next lecture.
 
 # The API methods documentation
 
-## <a href="https://ibucur.ima-solutions.ro/siit/shop_oop" target="blank">**Working Version of the API**</a>
+## <a href="https://ibucur.ima-solutions.ro/siit/shop_oop" target="_blank">**Working Version of the API**</a>
 
 Includes all the API documentation to be used in order to create the functionality of every single API request.
 
