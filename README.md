@@ -48,17 +48,17 @@ Every API call will receive a JSON response. It can be a success one or an error
 ## Error JSON format
 ```json
 {
-  "successful": false,
-  "errorCode": 1000,
-  "errorMessage": "some description of the error code"
+  	"successful": false,
+  	"errorCode": 1000,
+  	"errorMessage": "some description of the error code"
 }
 ```
 
 ## Success JSON format
 ```json
 {
-  "successful": true,
-  "details": "some object or array based on the request"
+  	"successful": true,
+  	"details": "some object or array based on the request"
 }
 ```
 
@@ -75,10 +75,10 @@ HEADER: content-type: application/json
 BODY: JSON
 ```
 ```json
-  {
-    "email": "email address",
-    "password": "password to login"
-  }
+{
+    	"email": "email address",
+   	"password": "password to login"
+}
 ```
 
 **SUCCESS DETAILS RESPONSE FORMAT**
@@ -118,7 +118,7 @@ HEADER: content-type: application/json
 BODY: JSON
 ```
 ```json
-  { 
+{ 
 	"email": "user_email",
 	"password": "some password",
 	"fullName": "some customer name",
@@ -151,10 +151,10 @@ HEADER: content-type: application/json
 BODY: JSON
 ```
 ```json
-  { 
-  "userId": 1,
-  "active": 1, 
-  "isAdmin": 1, 
+{ 
+  	"userId": 1,
+  	"active": 1, 
+  	"isAdmin": 1, 
 	"email": "user_email",
 	"password": "some password - OPTIONAL ONLY IF YOU WANT TO CHANGE IT",
 	"fullName": "some customer name",
@@ -264,10 +264,10 @@ HEADER: content-type: application/json
 BODY: JSON
 ```
 ```json
-  {
-    "categoryName": "name of the category",
-    "active": 1
-  }
+{
+    	"categoryName": "name of the category",
+    	"active": 1
+}
 ```
 
 **SUCCESS DETAILS RESPONSE FORMAT**
@@ -291,9 +291,9 @@ BODY: JSON
 ```
 ```json
 {
-    "categoryId": 1,
-    "categoryName": "name of the category",
-    "active": 1
+    	"categoryId": 1,
+    	"categoryName": "name of the category",
+    	"active": 1
 }
 ```
 
@@ -318,7 +318,7 @@ BODY: JSON
 ```
 ```json
 {
-    "categoryId": 1
+    	"categoryId": 1
 }
 ```
 
