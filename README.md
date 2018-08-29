@@ -36,11 +36,11 @@ Includes all the API documentation to be used in order to create the functionali
   * [3.4. Currency Get](#34-currency-get)
   * [3.5. Currency Get All](#35-currency-get-all)
 
-* [**4. Currency Conversions**](#3-currency-conversion)
-  * [4.1. Currency Conversion Add](#31-currency-conversion-add)
-  * [4.2. Currency Conversion Update](#32-currency-conversion-update)
-  * [4.3. Currency Conversion Get](#34-currency-conversion-get)
-  * [4.4. Currency Conversion Get All](#35-currency-get-conversion-all)
+* [**4. Currency Conversions**](#4-currency-conversion)
+  * [4.1. Currency Conversion Add](#41-currency-conversion-add)
+  * [4.2. Currency Conversion Update](#42-currency-conversion-update)
+  * [4.3. Currency Conversion Get](#43-currency-conversion-get)
+  * [4.4. Currency Conversion Get All](#44-currency-get-conversion-all)
 
 
 Every API call will receive a JSON response. It can be a success one or an error one.
