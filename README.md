@@ -32,9 +32,10 @@ Every API call will receive a JSON response. It can be a success one or an error
 }
 ```
 
-## USERS
+## 1. USERS
 
-### 1. USER LOGIN
+### 1.1. USER LOGIN
+Logs in a user using the passed credentials.
 
 **REQUEST**
 ```
@@ -64,7 +65,9 @@ BODY: JSON
 }
 ```
 
-### 1. USER LOGOUT
+### 1.2. USER LOGOUT
+Performs logout of a logged in user.
+
 **REQUEST**
 ```
 URI: /api/users/logout.php
@@ -74,7 +77,8 @@ BODY: EMPTY
 **RESPONSE**
 Success response with no details.
 
-### 1. USER ADD
+### 1.3. USER ADD
+Adds a user into the database.
 
 **REQUEST**
 ```
@@ -106,7 +110,8 @@ BODY: JSON
         "lastModify": "YYYY-MM-DD HH:MM:SS"
 }
 ```
-### * USER UPDATE
+### 1.4. USER UPDATE
+Updates a specified user into the database.
 
 **REQUEST**
 ```
@@ -143,7 +148,8 @@ _**NOTE**_: active, isAdmin and password are OPTIONAL. password should be sent o
 }
 ```
 
-### * USER DELETE
+### 1.5. USER DELETE
+Removes a specified user from the database.
 
 **REQUEST**
 ```
@@ -160,4 +166,57 @@ BODY: JSON
 
 **RESPONSE**
 Success response format
+
+### 1.6. USER GET
+Returns all the user details of a specified user or of the current logged in user.
+
+**REQUEST**
+```
+URI: /api/users/get.php[?userId=1]
+METHOD: GET
+BODY: EMPTY
+```
+The userId query string parameter can be specified by an admin or, if it is specified by the current logged in user which is not an admin, it should match the logged in userId. If it is not specified, the returned details will be the ones of the logged in user.
+
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+        "userId": 1,
+        "active": 1,
+        "fullName": "full name of user",
+        "email": "email address",
+        "isAdmin": 1,
+        "address": "address text",
+        "phoneNo": "phone number",
+        "lastModify": "YYYY-MM-DD HH:MM:SS"
+}
+```
+
+### 1.7. USER GET ALL
+Returns all the users from the database if a logged in admin makes the request.
+
+**REQUEST**
+```
+URI: /api/users/getAll.php[?pageNo=0&resultsPerPage=50]
+METHOD: GET
+BODY: EMPTY
+```
+
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+[
+{
+        "userId": 1,
+        "active": 1,
+        "fullName": "full name of user",
+        "email": "email address",
+        "isAdmin": 1,
+        "address": "address text",
+        "phoneNo": "phone number",
+        "lastModify": "YYYY-MM-DD HH:MM:SS"
+}
+]
+```
 
