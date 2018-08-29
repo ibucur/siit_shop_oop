@@ -886,3 +886,229 @@ BODY: EMPTY
     }
 ]
 ```
+
+## 7. SHOPPING CART
+
+### 7.1. SHOPPING CART ADD
+Adds a new product to the shopping cart.
+
+**REQUEST**
+```
+URI: /api/cart/add.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+    	"productId": 1,
+    	"quantity": 1,
+    	"currencyCode": "EUR"
+}
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+    "currencyCode": "EUR",
+    "totalValue": 240.60,
+    "products":
+        [
+            {
+                "productId": 1,
+                "productName": 1,
+                "quantity": 2,
+                "price": 120.30,
+                "total": 240.60
+            }
+        ]
+}
+```
+
+### 7.2. SHOPPING CART UPDATE
+Updates the quantity of a product from shopping cart. Sending 0 quantity removes the product from cart.
+
+**REQUEST**
+```
+URI: /api/cart/update.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+[
+    {
+    	"productId": 1,
+    	"quantity": 1,
+    	"currencyCode": "EUR"
+    }
+]
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+    "currencyCode": "EUR",
+    "totalValue": 240.60,
+    "products":
+        [
+            {
+                "productId": 1,
+                "productName": 1,
+                "quantity": 2,
+                "price": 120.30,
+                "total": 240.60
+            }
+        ]
+}
+```
+
+### 7.3. SHOPPING CART DELETE
+Removes a product from the shopping cart.
+
+**REQUEST**
+```
+URI: /api/cart/delete.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+[
+    {
+    	"productId": 1
+    }
+]
+```
+
+**RESPONSE**
+Returns the entire cart with all the remaining products
+```json
+{
+    "currencyCode": "EUR",
+    "totalValue": 240.60,
+    "products":
+        [
+            {
+                "productId": 1,
+                "productName": 1,
+                "quantity": 2,
+                "price": 120.30,
+                "total": 240.60
+            }
+        ]
+}
+```
+
+### 7.4. SHOPPING CART GET
+Get the details of the shopping cart.
+
+**REQUEST**
+```
+URI: /api/cart/get.php
+METHOD: GET
+BODY: EMPTY
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+If products are present in the cart otherwise the details content will not be present.
+```json
+{
+    "currencyCode": "EUR",
+    "totalValue": 240.60,
+    "products":
+        [
+            {
+                "productId": 1,
+                "productName": 1,
+                "quantity": 2,
+                "price": 120.30,
+                "total": 240.60
+            }
+        ]
+}
+```
+
+### 7.5. SHOPPING CART CLEAR
+Removes all the products from the shopping cart.
+
+**REQUEST**
+```
+URI: /api/cart/clear.php
+METHOD: GET
+BODY: EMPTY
+```
+
+**SUCCESS RESPONSE FORMAT**
+No content will be included in the details since the cart is empty
+
+### 7.6. SHOPPING CART CHANGE CURRENCY
+Change the current currency of the shopping cart.
+The currency can be changed as well automatically if a new product is added in a different currency.
+All the product prices from the cart will be changed to this new currency and the total affected.
+The response will contain the entire cart.
+
+**REQUEST**
+```
+URI: /api/cart/changeCurrency.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+
+```json
+{
+        "currencyCode": "RON"
+}
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+If products are present in the cart otherwise the details content will not be present.
+```json
+{
+    "currencyCode": "RON",
+    "totalValue": 1240.60,
+    "products":
+        [
+            {
+                "productId": 1,
+                "productName": 1,
+                "quantity": 2,
+                "price": 5120.30,
+                "total": 1240.60
+            }
+        ]
+}
+```
+
+### 7.7. SHOPPING CART FINALIZE
+Move the products from the shopping cart into an order and return the orderId.
+In order to be able to finalize an order, the user must be logged in.
+
+**REQUEST**
+```
+URI: /api/cart/finalize.php
+METHOD: POST
+BODY: EMPTY
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+If products are present in the cart otherwise the details content will not be present.
+```json
+{
+    "orderId": 1,
+    "userId": 1,
+    "currencyCode": "RON",
+    "totalValue": 1240.60,
+    "products":
+        [
+            {
+                "productId": 1,
+                "productName": 1,
+                "quantity": 2,
+                "price": 5120.30,
+                "total": 1240.60
+            }
+        ]
+}
+```
