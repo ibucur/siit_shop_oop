@@ -19,7 +19,7 @@ Every API call will receive a JSON response. It can be a success one or an error
 ```json
 {
   "successful": false,
-  "errorCode": 1000
+  "errorCode": 1000,
   "errorMessage": "some description of the error code"
 }
 ```
