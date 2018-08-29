@@ -614,3 +614,149 @@ BODY: EMPTY
     }
 ]
 ```
+
+
+## 5. PRODUCTS
+
+### 5.1. PRODUCTS ADD
+Adds a new product into the database.
+
+**REQUEST**
+```
+URI: /api/products/save.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+    	"categoryId": 1,
+    	"productName": "name of the product",
+    	"shortDescription": "the short description of the product",
+    	"description": "the long description of the product",
+    	"price": 120,
+    	"currencyCode": "EUR",
+    	"active": 1
+}
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+    	"productId": 1,
+    	"categoryId": 1,
+    	"productName": "name of the product",
+    	"shortDescription": "the short description of the product",
+    	"description": "the long description of the product",
+    	"price": 120,
+    	"currencyCode": "EUR",
+    	"active": 1
+}
+```
+
+### 5.2. PRODUCTS UPDATE
+Updates a product into the database.
+
+**REQUEST**
+```
+URI: /api/products/save.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+    	"productId": 1,
+    	"categoryId": 1,
+    	"productName": "name of the product",
+    	"shortDescription": "the short description of the product",
+    	"description": "the long description of the product",
+    	"price": 120,
+    	"currencyCode": "EUR",
+    	"active": 1
+}
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+    	"productId": 1,
+    	"categoryId": 1,
+    	"productName": "name of the product",
+    	"shortDescription": "the short description of the product",
+    	"description": "the long description of the product",
+    	"price": 120,
+    	"currencyCode": "EUR",
+    	"active": 1
+}
+```
+
+### 5.3. PRODUCTS DELETE
+Removes a product from the database.
+
+**REQUEST**
+```
+URI: /api/products/delete.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+    	"productId": 1
+}
+```
+
+**RESPONSE**
+Success response format with no details specified.
+
+
+### 5.4. PRODUCTS GET
+Get the details of a specified product.
+
+**REQUEST**
+```
+URI: /api/products/get.php?productId=1
+METHOD: GET
+BODY: EMPTY
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+    	"productId": 1,
+    	"categoryId": 1,
+    	"productName": "name of the product",
+    	"shortDescription": "the short description of the product",
+    	"description": "the long description of the product",
+    	"price": 120,
+    	"currencyCode": "EUR",
+    	"active": 1
+}
+```
+
+### 5.5. PRODUCTS GET ALL
+Get all the products from the database, for a specified category or all the products if no category is specified.
+
+**REQUEST**
+```
+URI: /api/products/getAll.php?categoryId=1[&pageNo=0&resultsPerPage=50]
+METHOD: GET
+BODY: EMPTY
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+[
+    {
+    	"productId": 1,
+    	"categoryId": 1,
+    	"productName": "name of the product",
+    	"shortDescription": "the short description of the product",
+    	"description": "the long description of the product",
+    	"price": 120,
+    	"currencyCode": "EUR",
+    	"active": 1
+    }
+]
+```
