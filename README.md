@@ -36,6 +36,12 @@ Includes all the API documentation to be used in order to create the functionali
   * [3.4. Currency Get](#34-currency-get)
   * [3.5. Currency Get All](#35-currency-get-all)
 
+* [**4. Currency Conversions**](#3-currency-conversion)
+  * [4.1. Currency Conversion Add](#31-currency-conversion-add)
+  * [4.2. Currency Conversion Update](#32-currency-conversion-update)
+  * [4.3. Currency Conversion Get](#34-currency-conversion-get)
+  * [4.4. Currency Conversion Get All](#35-currency-get-conversion-all)
+
 
 Every API call will receive a JSON response. It can be a success one or an error one.
 
@@ -344,7 +350,7 @@ Get all the categories from the database.
 
 **REQUEST**
 ```
-URI: /api/categories/getAll.php?pageNo=0&resultsPerPage=50
+URI: /api/categories/getAll.php[?pageNo=0&resultsPerPage=50]
 METHOD: GET
 BODY: EMPTY
 ```
@@ -456,12 +462,12 @@ BODY: EMPTY
 }
 ```
 
-### 2.5. CURRENCY GET ALL
+### 3.5. CURRENCY GET ALL
 Get all the currencies from the database.
 
 **REQUEST**
 ```
-URI: /api/currencies/getAll.php?pageNo=0&resultsPerPage=50
+URI: /api/currencies/getAll.php[?pageNo=0&resultsPerPage=50]
 METHOD: GET
 BODY: EMPTY
 ```
@@ -473,6 +479,109 @@ BODY: EMPTY
         "currencyCode": "EUR",
         "active": 1,
         "currencyName": "the name of the currency"
+    }
+]
+```
+
+
+## 4. CURRENCY CONVERSION
+
+### 4.1. CURRENCY CONVERSION ADD
+Adds a new currency conversion into the database.
+
+**REQUEST**
+```
+URI: /api/currencies/conversions/save.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+        "fromCurrencyCode": "ISO code of the from currency",
+        "toCurrencyCode": "ISO code of the to currency",
+        "exchangeRate": 4.67,
+        "exchangeDate": "YYYY-MM-DD"
+}
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+        "fromCurrencyCode": "ISO code of the from currency",
+        "toCurrencyCode": "ISO code of the to currency",
+        "exchangeRate": 4.67,
+        "exchangeDate": "YYYY-MM-DD"
+}
+```
+
+### 4.2. CURRENCY CONVERSION UPDATE
+Updates a currency conversion into the database.
+
+**REQUEST**
+```
+URI: /api/currencies/conversions/save.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+        "fromCurrencyCode": "ISO code of the from currency",
+        "toCurrencyCode": "ISO code of the to currency",
+        "exchangeRate": 4.67,
+        "exchangeDate": "YYYY-MM-DD"
+}
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+        "fromCurrencyCode": "ISO code of the from currency",
+        "toCurrencyCode": "ISO code of the to currency",
+        "exchangeRate": 4.67,
+        "exchangeDate": "YYYY-MM-DD"
+}
+```
+
+### 4.3. CURRENCY CONVERSION GET
+Get the details of a specified currency conversion.
+
+**REQUEST**
+```
+URI: /api/currencies/conversions/get.php?fromCurrencyCode=EUR&toCurrencyCode=RON&exchangeDate="YYYY-MM-DD"
+METHOD: GET
+BODY: EMPTY
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+        "fromCurrencyCode": "ISO code of the from currency",
+        "toCurrencyCode": "ISO code of the to currency",
+        "exchangeRate": 4.67,
+        "exchangeDate": "YYYY-MM-DD"
+}
+```
+
+### 4.4. CURRENCY CONVERSIONS GET ALL
+Get all the currency conversions valid on a specified date from the database.
+
+**REQUEST**
+```
+URI: /api/currencies/getAll.php?exchangeDate="YYYY-MM-DD"[&pageNo=0&resultsPerPage=50]
+METHOD: GET
+BODY: EMPTY
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+[
+    {
+        "fromCurrencyCode": "ISO code of the from currency",
+        "toCurrencyCode": "ISO code of the to currency",
+        "exchangeRate": 4.67,
+        "exchangeDate": "YYYY-MM-DD"
     }
 ]
 ```
