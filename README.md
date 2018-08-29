@@ -740,7 +740,7 @@ Get all the products from the database, for a specified category or all the prod
 
 **REQUEST**
 ```
-URI: /api/products/getAll.php?categoryId=1[&pageNo=0&resultsPerPage=50]
+URI: /api/products/getAll.php[?categoryId=1&pageNo=0&resultsPerPage=50]
 METHOD: GET
 BODY: EMPTY
 ```
