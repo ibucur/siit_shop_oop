@@ -34,7 +34,7 @@ Every API call will receive a JSON response. It can be a success one or an error
 
 ## USERS
 
-### * USER LOGIN
+### 1. USER LOGIN
 
 **REQUEST**
 ```
@@ -64,7 +64,7 @@ BODY: JSON
 }
 ```
 
-### * USER LOGOUT
+### 1. USER LOGOUT
 **REQUEST**
 ```
 URI: /api/users/logout.php
@@ -74,7 +74,7 @@ BODY: EMPTY
 **RESPONSE**
 Success response with no details.
 
-### * USER ADD
+### 1. USER ADD
 
 **REQUEST**
 ```
