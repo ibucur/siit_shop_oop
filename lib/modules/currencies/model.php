@@ -1,0 +1,5 @@
+<?php
+/**
+ * Currencies class model
+ */
+

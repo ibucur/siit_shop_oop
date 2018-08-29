@@ -5,10 +5,10 @@
  */
 
 class Config {
-	public static $url= 'http://localhost';
+	public static $url= 'https://ibucur.ima-solutions.ro/siit/shop_oop';
 	public static $dbHost= '127.0.0.1';
-	public static $dbUser= ''; /* todo: Define the correct username */
-	public static $dbPassword= ''; /* todo: define the correct password */
+	public static $dbUser= 'shop'; /* todo: Define the correct username */
+	public static $dbPassword= 'shop'; /* todo: define the correct password */
 	public static $dbName= 'shop';
 	public static $dbPort= 3306;
 	public static $imagesFolder= 'productImages';
