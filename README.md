@@ -760,3 +760,129 @@ BODY: EMPTY
     }
 ]
 ```
+
+
+## 6. PRODUCT IMAGES
+
+### 6.1. PRODUCT IMAGES ADD
+Adds a new product image into the database.
+
+**REQUEST**
+```
+URI: /api/products/images/save.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+    	"productId": 1,
+    	"isMainImage": 1,
+    	"imageBase64Encoded": "the image base 64 encoded content"
+}
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+    	"imageId": 1,
+    	"productId": 1,
+    	"isMainImage": 1,
+    	"imageUri": "the image uri where it can be found"
+}
+```
+
+### 6.2. PRODUCT IMAGES UPDATE
+Updates a product image into the database.
+
+**REQUEST**
+```
+URI: /api/products/images/save.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+    	"imageId": 1,
+    	"productId": 1,
+    	"isMainImage": 1,
+    	"imageBase64Encoded": "the image base 64 encoded content"
+}
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+    	"imageId": 1,
+    	"productId": 1,
+    	"isMainImage": 1,
+    	"imageUri": "the image uri where it can be found"
+}
+```
+
+### 6.3. PRODUCT IMAGES DELETE
+Removes a product image from the database.
+
+**REQUEST**
+```
+URI: /api/products/images/delete.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+    	"imageId": 1
+}
+```
+
+**RESPONSE**
+Success response format with no details specified.
+
+
+### 6.4. PRODUCT IMAGES GET
+Get the details of a specified product image.
+
+**REQUEST**
+```
+URI: /api/products/images/getMain.php?productId=1
+METHOD: GET
+BODY: EMPTY
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+    	"imageId": 1,
+    	"productId": 1,
+    	"isMainImage": 1,
+    	"imageUri": "the image uri where it can be found"
+}
+```
+
+### 6.5. PRODUCTS IMAGES GET ALL
+Get all the product images from the database, for a specified product.
+
+**REQUEST**
+```
+URI: /api/products/images/getAll.php?productId=1[&pageNo=0&resultsPerPage=50]
+METHOD: GET
+BODY: EMPTY
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+[
+    {
+        "imageId": 1,
+        "isMainImage": 1,
+        "imageUri": "the image uri where it can be found"
+    },
+    {
+        "imageId": 2,
+        "isMainImage": 0,
+        "imageUri": "the image uri where it can be found"
+    }
+]
+```
