@@ -13,7 +13,7 @@ This should be done until the next lecture.
 
 Includes all the API documentation to be used in order to create the functionality of every single API request.
 
-[1. Users](#1-users)
+[**1. Users**](#1-users)
 
   [1.1. User Login](#11-user-login)
     
@@ -30,17 +30,17 @@ Includes all the API documentation to be used in order to create the functionali
   [1.7. User Get All](#17-user-get-all)
   
     
-[2. Categories](#2-categories)
+[**2. Categories**](#2-categories)
 
-  [2.1. Category Add](#21-category-add)
+[2.1. Category Add](#21-category-add)
   
-  [2.2. Category Update](#22-category-update)
+[2.2. Category Update](#22-category-update)
   
-  [2.3. Category Delete](#23-category-delete)
+[2.3. Category Delete](#23-category-delete)
   
-  [2.4. Category Get](#24-category-get)
+[2.4. Category Get](#24-category-get)
   
-  [2.5. Category Get All](#25-category-get-all)
+[2.5. Category Get All](#25-category-get-all)
     
 
 Every API call will receive a JSON response. It can be a success one or an error one.
