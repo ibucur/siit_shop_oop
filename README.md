@@ -34,7 +34,7 @@ Every API call will receive a JSON response. It can be a success one or an error
 
 ## USERS
 
-### USER LOGIN
+### * USER LOGIN
 
 **REQUEST**
 ```
@@ -64,7 +64,7 @@ BODY: JSON
 }
 ```
 
-### USER LOGOUT
+### * USER LOGOUT
 **REQUEST**
 ```
 URI: /api/users/logout.php
@@ -74,7 +74,7 @@ BODY: EMPTY
 **RESPONSE**
 Success response with no details.
 
-### USER ADD
+### * USER ADD
 
 **REQUEST**
 ```
@@ -106,7 +106,7 @@ BODY: JSON
         "lastModify": "YYYY-MM-DD HH:MM:SS"
 }
 ```
-### USER UPDATE
+### * USER UPDATE
 
 **REQUEST**
 ```
@@ -127,6 +127,7 @@ BODY: JSON
 	"phoneNo": "some phone number"
 }
 ```
+_**NOTE**_: active, isAdmin and password are OPTIONAL. password should be sent only if you want to change the existing one. active and isAdmin can be sent only by the admin. Other logged in users if they send it will not be taken in consideration.
 
 **SUCCESS DETAILS RESPONSE FORMAT**
 ```json
@@ -142,7 +143,7 @@ BODY: JSON
 }
 ```
 
-### USER DELETE
+### * USER DELETE
 
 **REQUEST**
 ```
