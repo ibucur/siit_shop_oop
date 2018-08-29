@@ -153,8 +153,8 @@ BODY: JSON
 ```json
   { 
   "userId": 1,
-  "active": 1, //only admin can send it
-  "isAdmin": 1, //only admin can send it
+  "active": 1, 
+  "isAdmin": 1, 
 	"email": "user_email",
 	"password": "some password - OPTIONAL ONLY IF YOU WANT TO CHANGE IT",
 	"fullName": "some customer name",
