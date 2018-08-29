@@ -1074,7 +1074,7 @@ If products are present in the cart otherwise the details content will not be pr
                 "productId": 1,
                 "productName": 1,
                 "quantity": 2,
-                "price": 5120.30,
+                "price": 620.30,
                 "total": 1240.60
             }
         ]
@@ -1106,9 +1106,149 @@ If products are present in the cart otherwise the details content will not be pr
                 "productId": 1,
                 "productName": 1,
                 "quantity": 2,
-                "price": 5120.30,
+                "price": 620.30,
                 "total": 1240.60
             }
         ]
 }
+```
+
+## 8. ORDERS
+
+### 8.1. ORDERS UPDATE
+Update an order status.
+
+**REQUEST**
+```
+URI: /api/orders/update.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+    	"orderId": 1,
+    	"orderStatus": "new status",
+    	"fullName": "name of the customer",
+        "deliveryAddress": "the customer delivery address"
+}
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+    	"orderId": 1,
+    	"userId": 1,
+    	"currencyCode": "EUR",
+    	"totalValue": 1240.60,
+    	"status": "order status",
+    	"fullName": "name of the customer",
+    	"deliveryAddress": "the customer delivery address",
+    	"orderDateTime": "YYYY-MM-DD HH:MM:SS",
+    	"statusDateTime": "YYYY-MM-DD HH:MM:SS",
+    	"products": [
+    	    {
+    	        "productId": 1,
+    	        "quantity": 2,
+    	        "price": 620.30,
+    	        "total": 1240.60
+    	    }
+    	]
+}
+```
+
+### 8.2. ORDER CANCEL
+Cancel an order into the database.
+
+**REQUEST**
+```
+URI: /api/products/cancel.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+    	"orderId": 1
+}
+```
+
+**RESPONSE**
+```json
+{
+    	"orderId": 1,
+    	"userId": 1,
+    	"currencyCode": "EUR",
+    	"totalValue": 1240.60,
+    	"status": "order status",
+    	"fullName": "name of the customer",
+    	"deliveryAddress": "the customer delivery address",
+    	"orderDateTime": "YYYY-MM-DD HH:MM:SS",
+    	"statusDateTime": "YYYY-MM-DD HH:MM:SS",
+    	"products": [
+    	    {
+    	        "productId": 1,
+    	        "quantity": 2,
+    	        "price": 620.30,
+    	        "total": 1240.60
+    	    }
+    	]
+}
+```
+
+### 8.3. ORDERS GET
+Get the details of a specified orderId.
+
+**REQUEST**
+```
+URI: /api/orders/get.php?orderId=1
+METHOD: GET
+BODY: EMPTY
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+    	"orderId": 1,
+    	"userId": 1,
+    	"currencyCode": "EUR",
+    	"totalValue": 1240.60,
+    	"status": "order status",
+    	"fullName": "name of the customer",
+    	"deliveryAddress": "the customer delivery address",
+    	"orderDateTime": "YYYY-MM-DD HH:MM:SS",
+    	"statusDateTime": "YYYY-MM-DD HH:MM:SS",
+    	"products": [
+    	    {
+    	        "productId": 1,
+    	        "quantity": 2,
+    	        "price": 620.30,
+    	        "total": 1240.60
+    	    }
+    	]
+}
+```
+
+### 8.4. ORDERS GET ALL
+Get all orders main details from the database, for a specified userId or all the orders if no userId is specified.
+
+**REQUEST**
+```
+URI: /api/orders/getAll.php[?userId=1&pageNo=0&resultsPerPage=50]
+METHOD: GET
+BODY: EMPTY
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+[
+    {
+    	"orderId": 1,
+    	"userId": 1,
+    	"currencyCode": "EUR",
+    	"totalValue": 1240.60,
+    	"status": "order status",
+    	"fullName": "name of the customer"
+    }
+]
 ```
