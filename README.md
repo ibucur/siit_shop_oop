@@ -289,7 +289,7 @@ BODY: JSON
 {
         "categoryId": 1,
         "active": 1,
-        "categoryName": "the name of added category"
+        "categoryName": "the name of updated category"
 }
 ```
 
@@ -328,7 +328,7 @@ BODY: EMPTY
 {
         "categoryId": 1,
         "active": 1,
-        "categoryName": "the name of added category"
+        "categoryName": "the name of the category"
 }
 ```
 
@@ -337,7 +337,7 @@ Get all the categories from the database.
 
 **REQUEST**
 ```
-URI: /api/categories/getAll.php
+URI: /api/categories/getAll.php?pageNo=0&resultsPerPage=50
 METHOD: GET
 BODY: EMPTY
 ```
@@ -348,7 +348,124 @@ BODY: EMPTY
     {
         "categoryId": 1,
         "active": 1,
-        "categoryName": "the name of added category"
+        "categoryName": "the name of the category"
+    }
+]
+```
+
+
+## 3. CURRENCIES
+
+### 3.1. CURRENCY ADD
+Adds a new currency into the database.
+
+**REQUEST**
+```
+URI: /api/currencies/save.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+    	"currencyCode": "ISO code of the currency",
+    	"currencyName": "name of the currency",
+    	"active": 1
+}
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+        "currencyCode": "EUR",
+        "active": 1,
+        "currencyName": "the name of the added currency"
+}
+```
+
+### 3.2. CURRENCY UPDATE
+Updates a currency into the database.
+
+**REQUEST**
+```
+URI: /api/currencies/save.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+    	"currencyCode": "EUR",
+    	"currencyName": "name of the currency",
+    	"active": 1
+}
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+        "currencyCode": "EUR",
+        "active": 1,
+        "currencyName": "the name of the updated currency"
+}
+```
+
+### 3.3. CURRENCY DELETE
+Removes a currency from the database.
+
+**REQUEST**
+```
+URI: /api/currencies/delete.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+    	"currencyCode": "EUR"
+}
+```
+
+**RESPONSE**
+Success response format with no details specified.
+
+
+### 3.4. CURRENCY GET
+Get the details of a specified currency.
+
+**REQUEST**
+```
+URI: /api/currencies/get.php?currencyCode=EUR
+METHOD: GET
+BODY: EMPTY
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+        "currencyCode": 1,
+        "active": 1,
+        "currencyName": "the name of the currency"
+}
+```
+
+### 2.5. CURRENCY GET ALL
+Get all the currencies from the database.
+
+**REQUEST**
+```
+URI: /api/currencies/getAll.php?pageNo=0&resultsPerPage=50
+METHOD: GET
+BODY: EMPTY
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+[
+    {
+        "currencyCode": "EUR",
+        "active": 1,
+        "currencyName": "the name of the currency"
     }
 ]
 ```
