@@ -40,7 +40,7 @@ Every API call will receive a JSON response. It can be a success one or an error
 ```
 URI: /api/users/login.php
 METHOD: POST
-HEADER: content-type: application.json
+HEADER: content-type: application/json
 BODY: JSON
 ```
 ```json
