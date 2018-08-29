@@ -207,7 +207,7 @@ BODY: EMPTY
 **SUCCESS DETAILS RESPONSE FORMAT**
 ```json
 [
-{
+    {
         "userId": 1,
         "active": 1,
         "fullName": "full name of user",
@@ -216,7 +216,122 @@ BODY: EMPTY
         "address": "address text",
         "phoneNo": "phone number",
         "lastModify": "YYYY-MM-DD HH:MM:SS"
-}
+    }
 ]
 ```
 
+
+## 2. CATEGORIES
+
+### 2.1. CATEGORY ADD
+Adds a new category into the database.
+
+**REQUEST**
+```
+URI: /api/categories/save.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+  {
+    "categoryName": "name of the category",
+    "active": 1
+  }
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+        "categoryId": 1,
+        "active": 1,
+        "categoryName": "the name of added category"
+}
+```
+
+### 2.2. CATEGORY UPDATE
+Updates a category into the database.
+
+**REQUEST**
+```
+URI: /api/categories/save.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+    "categoryId": 1,
+    "categoryName": "name of the category",
+    "active": 1
+}
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+        "categoryId": 1,
+        "active": 1,
+        "categoryName": "the name of added category"
+}
+```
+
+### 2.3. CATEGORY ADD
+Removes a category from the database.
+
+**REQUEST**
+```
+URI: /api/categories/delete.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{
+    "categoryId": 1
+}
+```
+
+**RESPONSE**
+Success response format with no details specified.
+
+
+### 2.4. CATEGORY GET
+Get the details of a specified category.
+
+**REQUEST**
+```
+URI: /api/categories/get.php?categoryId=1
+METHOD: GET
+BODY: EMPTY
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+        "categoryId": 1,
+        "active": 1,
+        "categoryName": "the name of added category"
+}
+```
+
+### 2.5. CATEGORY GET ALL
+Get all the categories from the database.
+
+**REQUEST**
+```
+URI: /api/categories/getAll.php
+METHOD: GET
+BODY: EMPTY
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+[
+    {
+        "categoryId": 1,
+        "active": 1,
+        "categoryName": "the name of added category"
+    }
+]
+```
