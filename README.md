@@ -16,11 +16,13 @@ Includes all the API documentation to be used in order to create the functionali
 Every API call will receive a JSON response. It can be a success one or an error one.
 
 ## Error JSON format
+**
 {
   "successful": false,
   "errorCode": some error code number
   "errorMessage": some description of the error code
 }
+**
 
 ## Success JSON format
 
