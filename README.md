@@ -34,7 +34,7 @@ Every API call will receive a JSON response. It can be a success one or an error
 
 ## USERS
 
-### User Login
+### USER LOGIN
 
 **REQUEST**
 ```
@@ -50,11 +50,9 @@ BODY: JSON
   }
 ```
 
-**RESPONSE**
+**SUCCESS DETAILS RESPONSE FORMAT**
 ```json
 {
-  "successful": true,
-  "details": {
         "userId": 1,
         "active": 1,
         "fullName": "full name of user",
@@ -63,6 +61,102 @@ BODY: JSON
         "address": "address text",
         "phoneNo": "phone number",
         "lastModify": "YYYY-MM-DD HH:MM:SS"
-  }
 }
 ```
+
+### USER LOGOUT
+**REQUEST**
+```
+URI: /api/users/logout.php
+METHOD: GET
+BODY: EMPTY
+```
+**RESPONSE**
+Success response with no details.
+
+### USER ADD
+
+**REQUEST**
+```
+URI: /api/users/save.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+  { 
+	"email": "user_email",
+	"password": "some password",
+	"fullName": "some customer name",
+	"address": "some address",
+	"phoneNo": "some phone number"
+}
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+        "userId": 1,
+        "active": 1,
+        "fullName": "full name of user",
+        "email": "email address",
+        "isAdmin": 1,
+        "address": "address text",
+        "phoneNo": "phone number",
+        "lastModify": "YYYY-MM-DD HH:MM:SS"
+}
+```
+### USER UPDATE
+
+**REQUEST**
+```
+URI: /api/users/save.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+  { 
+  "userId": 1,
+  "active": 1, //only admin can send it
+  "isAdmin": 1, //only admin can send it
+	"email": "user_email",
+	"password": "some password - OPTIONAL ONLY IF YOU WANT TO CHANGE IT",
+	"fullName": "some customer name",
+	"address": "some address",
+	"phoneNo": "some phone number"
+}
+```
+
+**SUCCESS DETAILS RESPONSE FORMAT**
+```json
+{
+        "userId": 1,
+        "active": 1,
+        "fullName": "full name of user",
+        "email": "email address",
+        "isAdmin": 1,
+        "address": "address text",
+        "phoneNo": "phone number",
+        "lastModify": "YYYY-MM-DD HH:MM:SS"
+}
+```
+
+### USER DELETE
+
+**REQUEST**
+```
+URI: /api/users/delete.php
+METHOD: POST
+HEADER: content-type: application/json
+BODY: JSON
+```
+```json
+{ 
+	"userId": 1
+}
+```
+
+**RESPONSE**
+Success response format
+
