@@ -35,6 +35,8 @@ Every API call will receive a JSON response. It can be a success one or an error
 ## USERS
 
 ### User Login
+
+**REQUEST**
 ```
 URI: /api/users/login.php
 METHOD: POST
@@ -47,10 +49,8 @@ BODY: JSON
     "password": "password to login"
   }
 ```
-```
-RESPONSE:
-  It is a JSON format
-```
+
+**RESPONSE**
 ```json
 {
   "successful": true,
