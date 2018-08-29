@@ -14,8 +14,8 @@ This should be done until the next lecture.
 Includes all the API documentation to be used in order to create the functionality of every single API request.
 
 [**1. Users**](#1-users)  
-  + [1.1. User Login](#11-user-login)  
-  + [1.2. User Logout](#12-user-logout)  
+  * [1.1. User Login](#11-user-login)  
+  * [1.2. User Logout](#12-user-logout)  
 [1.3. User Add](#13-user-add)  
 [1.4. User Update](#14-user-update)  
 [1.5. User Delete](#15-user-delete)  
