@@ -42,6 +42,35 @@ Includes all the API documentation to be used in order to create the functionali
   * [4.3. Currency Conversion Get](#43-currency-conversion-get)
   * [4.4. Currency Conversion Get All](#44-currency-get-conversion-all)
 
+* [**5. Products**](#5-products)
+  * [5.1. Products Add](#51-products-add)
+  * [5.2. Products Update](#52-products-update)
+  * [5.3. Products Delete](#53-products-delete)
+  * [5.4. Products Get](#54-products-get)
+  * [5.5. Products Get All](#55-products-get-all)
+
+* [**6. Product Images**](#6-product-images)
+  * [6.1. Product Images Add](#61-product-images-add)
+  * [6.2. Product Images Update](#62-product-images-update)
+  * [6.3. Product Images Delete](#63-product-images-delete)
+  * [6.4. Product Images Get Main](#64-product-images-get-main)
+  * [6.5. Product Images Get All](#65-product-images-get-all)
+
+* [**7. Shopping Cart**](#7-shopping-cart)
+  * [7.1. Shopping Cart Add](#71-shopping-cart-add)
+  * [7.2. Shopping Cart Update](#72-shopping-cart-update)
+  * [7.3. Shopping Cart Delete](#73-shopping-cart-delete)
+  * [7.4. Shopping Cart Get](#74-shopping-cart-get)
+  * [7.5. Shopping Cart Clear](#75-shopping-cart-clear)
+  * [7.6. Shopping Cart Change Currency](#76-shopping-cart-change-currency)
+  * [7.7. Shopping Cart Finalize](#77-shopping-cart-finalize)
+
+* [**8. Orders**](#8-orders)
+  * [8.1. Orders Update](#81-orders-update)
+  * [8.2. Orders Cancel](#82-orders-cancel)
+  * [8.3. Orders Get](#83-orders-get)
+  * [8.4. Orders Get All](#84-orders-get-all)
+
 
 Every API call will receive a JSON response. It can be a success one or an error one.
 
