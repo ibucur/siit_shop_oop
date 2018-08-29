@@ -15,12 +15,18 @@ class ErrorClass{
 		_ERROR_ON_DECODING_SINCE_METHOD_IS_NOT_POST => 'The method to be used in order to send data has to be POST.',
 		_ERROR_ON_DECODING_SINCE_POSTED_DATA_IS_NOT_APPLICATION_JSON => 'The POST method used is sending other details than application/json content type.',
 
+		_ERROR_ON_RUNNING_SQL_QUERY => 'There was an error when running sql query.',
+
 		_ERROR_INVALID_LOGIN_DETAILS => 'The user details sent to login are invalid',
 		_ERROR_INCOMPLETE_LOGIN_DETAILS_PASSED => 'You need to pass the user email and password in order to be able to login',
 		_ERROR_USER_NOT_LOGGED_IN_TO_LOGOUT => 'In order to logout you need to login first.',
 		_ERROR_USER_PASSWORD_CANNOT_BE_EMPTY => 'The password cannot be left blank.',
 		_ERROR_USER_PROFILE_DETAILS_ARE_INCOMPLETE => 'The user details are not correctly specified. Some fields are missing.',
 		_ERROR_USER_EMAIL_IS_ALREADY_IN_USE => 'The user email is already in use.',
+		_ERROR_THE_USER_ID_SENT_IS_INCORRECT => 'The userId sent is not correct. It should be a valid unsigned integer number.',
+		_ERROR_ACCESS_TO_THIS_FUNCTIONALITY_IS_LIMITED_TO_LOGGED_IN_ADMIN_USERS => 'In order to access this functionality, an admin user should be logged in',
+		_ERROR_THE_USER_ID_SEND_DOES_NOT_EXISTS => 'The userId sent does not exists',
+		_ERROR_THE_FUNCTIONALITY_IS_LIMITED_ONLY_TO_LOGGED_IN_USERS => 'The ACCESS to this functionality is limited only to logged in users.',
 	);
 
 	/**
