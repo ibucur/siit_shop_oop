@@ -28,13 +28,18 @@ Includes all the API documentation to be used in order to create the functionali
   [1.6. User Get](#16-user-get)
     
   [1.7. User Get All](#17-user-get-all)
+  
     
 [2. Categories](#2-categories)
 
   [2.1. Category Add](#21-category-add)
+  
   [2.2. Category Update](#22-category-update)
+  
   [2.3. Category Delete](#23-category-delete)
+  
   [2.4. Category Get](#24-category-get)
+  
   [2.5. Category Get All](#25-category-get-all)
     
 
