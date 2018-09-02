@@ -714,11 +714,11 @@ Success response format with no details specified.
 
 
 ### 5.4. PRODUCTS GET
-Get the details of a specified product.
+Get the details of a specified product. The prices will be returned in the specified currency if it is mentioned otherwise in the default product currency.
 
 **REQUEST**
 ```
-URI: /api/products/get.php?productId=1
+URI: /api/products/get.php?productId=1[&getPriceInCurrency=EUR]
 METHOD: GET
 BODY: EMPTY
 ```
@@ -739,10 +739,11 @@ BODY: EMPTY
 
 ### 5.5. PRODUCTS GET ALL
 Get all the products from the database, for a specified category or all the products if no category is specified.
+The prices will be returned in the requested currency if it is mentioned, otherwise in the product currency.
 
 **REQUEST**
 ```
-URI: /api/products/getAll.php[?categoryId=1&pageNo=0&resultsPerPage=50]
+URI: /api/products/getAll.php[?categoryId=1&getPriceInCurrency=EUR&pageNo=0&resultsPerPage=50]
 METHOD: GET
 BODY: EMPTY
 ```
