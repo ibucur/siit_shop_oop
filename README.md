@@ -1149,7 +1149,7 @@ BODY: JSON
     	"deliveryAddress": "the customer delivery address",
     	"orderDateTime": "YYYY-MM-DD HH:MM:SS",
     	"statusDateTime": "YYYY-MM-DD HH:MM:SS",
-    	"products": [
+    	"details": [
     	    {
     	        "productId": 1,
     	        "quantity": 2,
@@ -1188,7 +1188,7 @@ BODY: JSON
     	"deliveryAddress": "the customer delivery address",
     	"orderDateTime": "YYYY-MM-DD HH:MM:SS",
     	"statusDateTime": "YYYY-MM-DD HH:MM:SS",
-    	"products": [
+    	"details": [
     	    {
     	        "productId": 1,
     	        "quantity": 2,
@@ -1221,7 +1221,7 @@ BODY: EMPTY
     	"deliveryAddress": "the customer delivery address",
     	"orderDateTime": "YYYY-MM-DD HH:MM:SS",
     	"statusDateTime": "YYYY-MM-DD HH:MM:SS",
-    	"products": [
+    	"details": [
     	    {
     	        "productId": 1,
     	        "quantity": 2,
