@@ -74,6 +74,8 @@ Includes all the API documentation to be used in order to create the functionali
   * [8.4. Orders Get All](#84-orders-get-all)
 
 
+[![Run Examples in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/1b30f97827140680ac21)
+
 Every API call will receive a JSON response. It can be a success one or an error one.
 
 ## Error JSON format
